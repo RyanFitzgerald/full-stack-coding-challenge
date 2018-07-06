@@ -3,6 +3,7 @@ import styledNormalize from 'styled-normalize';
  
 injectGlobal`
   ${styledNormalize}
+  
   *,
   *:before,
   *:after {
