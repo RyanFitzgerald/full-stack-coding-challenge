@@ -1,7 +1,9 @@
 const mongoose = require('mongoose');
 
+// Use ES6 promises
 mongoose.Promise = global.Promise;
 
+// Create the schema
 const addressSchema = new mongoose.Schema({
   dateAdded: {
     type: Date,
@@ -27,7 +29,8 @@ const addressSchema = new mongoose.Schema({
   },
   state: {
     type: String,
-    required: 'A province or state is required'
+    required: 'A province or state is required',
+    index: true // Index it for better performance
   },
   country: {
     type: String,
@@ -49,4 +52,5 @@ const addressSchema = new mongoose.Schema({
   },
 });
 
+// Export the new schema
 module.exports = mongoose.model('Address', addressSchema);

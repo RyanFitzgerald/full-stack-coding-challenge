@@ -15,5 +15,8 @@ export const getRequest = (url) => {
 };
 
 export const postRequest = (url, data) => {
-  return axios.post(`${apiURL}${url}`, data, { headers });
+  return axios
+    .post(`${apiURL}${url}`, data)
+    .then(resp => resp.data)
+    .catch(err => err.response);
 };

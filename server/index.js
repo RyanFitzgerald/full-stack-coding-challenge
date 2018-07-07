@@ -1,4 +1,3 @@
-// Import required packages
 const mongoose = require('mongoose');
 
 // import environmental variables from our variables.env file

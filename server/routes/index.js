@@ -1,4 +1,3 @@
-// Import required packages
 const express = require('express');
 const { catchErrors } = require('../handlers/errorHandlers');
 const router = express.Router();
@@ -13,6 +12,7 @@ router.get('/', (req, res) => {
 
 // --- Handle Address Routes ---
 router.get('/api/v1/addresses', catchErrors(addressController.getAddresses));
+router.post('/api/v1/addresses', addressController.uploadCSV, catchErrors(addressController.addAddresses));
 
 // Export the router
 module.exports = router;

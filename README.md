@@ -1,5 +1,16 @@
 ## Full Stack Coding Challenge
 
+### Submission Details
+
+#### Setup
+
+#### Challenges
+
+* Dealing with result data
+* Dealing with uploaded CSVs
+
+### Submission Requirements
+
 #### Description
 - Build a UI which will display a number of addresses retrieved from an api endpoint
 
