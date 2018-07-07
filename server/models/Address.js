@@ -17,15 +17,15 @@ const addressSchema = new mongoose.Schema({
     type: Number,
     required: 'A street number is required'
   },
-  route: {
+  street: {
     type: String,
-    required: 'A route is required'
+    required: 'A street is required'
   },
-  locality: {
+  city: {
     type: String,
-    required: 'A locality is required'
+    required: 'A city is required'
   },
-  provinceState: {
+  state: {
     type: String,
     required: 'A province or state is required'
   },
@@ -44,7 +44,7 @@ const addressSchema = new mongoose.Schema({
     },
     coordinates: {
       type: [Number],
-      default: [-75.69719309999999, 45.4215296]
+      required: 'Coordinates are required'
     },
   },
 });

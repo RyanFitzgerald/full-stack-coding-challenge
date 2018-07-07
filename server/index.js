@@ -8,9 +8,9 @@ require('dotenv').config({
 
 // Connect to our Database and handle a bad connections
 if (process.env.NODE_ENV === 'test') {
-  mongoose.connect(process.env.DATABASE_TEST);
+  mongoose.connect(process.env.DATABASE_TEST, { useNewUrlParser: true });
 } else {
-  mongoose.connect(process.env.DATABASE);
+  mongoose.connect(process.env.DATABASE, { useNewUrlParser: true });
 }
 
 // Tell Mongoose to use ES6 promises

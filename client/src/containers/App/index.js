@@ -1,5 +1,7 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 // Import Containers
 import SearchPage from '../SearchPage';
@@ -12,6 +14,15 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
+        <ToastContainer
+          position="top-right"
+          type="success"
+          autoClose={3000}
+          hideProgressBar
+          newestOnTop
+          closeOnClick
+          pauseOnHover
+        />
         <Header/>
         <Switch>
           <Route exact path="/" component={SearchPage}/>

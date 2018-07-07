@@ -6,7 +6,7 @@ import Input from './Input';
 import ListButton from './ListButton';
 import MapButton from './MapButton';
 
-function Search({ onType, onClick }) {
+function Search({ activeType, query, onQueryChange, onTypeChange }) {
   return (
     <Wrapper>
       <Icon>
@@ -15,9 +15,9 @@ function Search({ onType, onClick }) {
           <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
         </svg>
       </Icon>
-      <Input type="text" name="Search" placeholder="Enter Search Term" />
-      <ListButton active={true}>List View</ListButton>
-      <MapButton>Map View</MapButton>
+      <Input type="text" name="Search" placeholder="Enter Search Term" defaultValue={query} onChange={(input) => onQueryChange(input.target.value)} />
+      <ListButton active={activeType === 'List'} onClick={() => onTypeChange('List')}>List View</ListButton>
+      <MapButton active={activeType === 'Map'} onClick={() => onTypeChange('Map')}>Map View</MapButton>
     </Wrapper>
   );
 }
