@@ -1,12 +1,15 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
+// Import components
 import Wrapper from './Wrapper';
 import Icon from './Icon';
 import Input from './Input';
 import ListButton from './ListButton';
 import MapButton from './MapButton';
 
-function Search({ activeType, query, onQueryChange, onTypeChange }) {
+// Define the component
+function Search({ activeType = 'List', query = '', onQueryChange, onTypeChange }) {
   return (
     <Wrapper>
       <Icon>
@@ -21,5 +24,13 @@ function Search({ activeType, query, onQueryChange, onTypeChange }) {
     </Wrapper>
   );
 }
+
+// Define the props
+Search.propTypes = {
+  activeType: PropTypes.string.isRequired,
+  query: PropTypes.string.isRequired,
+  onQueryChange: PropTypes.func.isRequired,
+  onTypeChange: PropTypes.func.isRequired
+};
 
 export default Search;

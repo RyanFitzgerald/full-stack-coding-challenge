@@ -71,23 +71,27 @@ class SearchPage extends React.Component {
 
   // Render results based on type chosen
   renderResults(type, sets, data) {
+    // If there is no data, show loading
     if (!data) {
       return (
         <Loading/>
       );
     }
 
+    // If type is Map, render the map
     if (type === 'Map') {
       return (
         <ResultMap data={data}/>
       );
     }
 
+    // Otherwise, render the table
     return (
       <ResultTable data={data} sets={sets}/>
     );
   }
 
+  // Render the "Load More" button if needed (i.e. more data and type 'List')
   renderLoadButton(type, sets, dataLength) {
     // Only show if not a map and you haven't reached the end
     if (type !== 'Map' && (sets * 20) <= dataLength) {

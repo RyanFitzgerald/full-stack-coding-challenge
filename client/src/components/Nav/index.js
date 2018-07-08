@@ -3,6 +3,7 @@ import React from 'react';
 // Import components
 import Link from './Link';
 
+// Define the component
 function Nav() {
   return (
     <nav>

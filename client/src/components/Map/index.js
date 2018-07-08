@@ -1,6 +1,8 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { withScriptjs, withGoogleMap, GoogleMap } from "react-google-maps";
 
+// Define the component
 const Map = withScriptjs(withGoogleMap(function({ children }) { 
   return (
     <GoogleMap
@@ -11,5 +13,10 @@ const Map = withScriptjs(withGoogleMap(function({ children }) {
     </GoogleMap>
   );
 }));
+
+// Define prop types
+Map.propTypes = {
+  children: PropTypes.element.isRequired
+}
 
 export default Map;

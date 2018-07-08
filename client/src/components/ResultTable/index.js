@@ -1,11 +1,14 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
+// Import components
 import Wrapper from './Wrapper';
 import Table from './Table';
 import Th from './Th';
 import Tr from './Tr';
 import Td from './Td';
 
+// Render rows for provided addresses
 function renderRow(address, key) {
   return (
     <Tr key={key}>
@@ -19,7 +22,8 @@ function renderRow(address, key) {
   )
 }
 
-function ResultTable({ sets, data }) {
+// Define the component
+function ResultTable({ sets = 1, data }) {
   // Show data in groups of 20 for lists
   const displayData = data.slice(0, sets * 20);
 
@@ -43,5 +47,11 @@ function ResultTable({ sets, data }) {
     </Wrapper>
   );
 }
+
+// Define the props
+ResultTable.propTypes = {
+  sets: PropTypes.number.isRequired,
+  data: PropTypes.array.isRequired
+};
 
 export default ResultTable;

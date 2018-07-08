@@ -1,3 +1,17 @@
+const axios = require('axios');
+
+// Geocode the address by hitting the Geocode API and return false if a bad address
+exports.geocodeAddress = (address) => {
+  return axios.get(`https://maps.googleapis.com/maps/api/geocode/json?address=${address}&key=${process.env.GEOCODING_API_KEY}`).then((response) => {
+    if (response.data.status === 'OK' && response.data.results[0].geometry.location_type === 'ROOFTOP') {
+      return response.data.results[0];
+    }
+
+    return false;
+  });
+};
+
+// Take the raw API data and format it as needed
 exports.prepareGeocodeData = (data) => {
   // Result object
   const result = {};

@@ -3,12 +3,25 @@ const Address = mongoose.model('Address');
 const fs = require('fs');
 const csv = require('fast-csv');
 const multer = require('multer');
-const request = require('request');
-const { prepareGeocodeData } = require('../handlers/geocodeHandlers');
+const { geocodeAddress, prepareGeocodeData } = require('../handlers/geocodeHandlers');
+
+// Define options for multer
+const multerOptions = {
+  dest: 'tmp/csv/',
+  fileFilter(req, file, next) {
+    const isCSV = file.mimetype === 'text/csv' || file.mimetype === 'application/vnd.ms-excel';
+
+    if (isCSV) {
+      next(null, true);
+    } else {
+      next({message: 'That filetype is not allowed!'}, false); 
+    }
+  }
+};
 
 // Get all addresses and filter based on provided query
 exports.getAddresses = async (req, res) => {
-  // Set a filter
+  // Set empty filter
   let filter = {};
 
   // Check if a query is provided and update filter
@@ -22,7 +35,7 @@ exports.getAddresses = async (req, res) => {
     };
   }
 
-  // Get Addresses
+  // Get matching Addresses
   const addresses = await Address.find(filter);
 
   // Send result
@@ -30,50 +43,48 @@ exports.getAddresses = async (req, res) => {
 };
 
 // Store the csv in temp storage
-exports.uploadCSV = multer({dest: 'tmp/csv/'}).single('file');
+exports.uploadCSV = multer(multerOptions).single('file');
 
 // Add new addresses from provided CSV file
 exports.addAddresses = async (req, res) => {
-  var addressRows = [];
+  // Store rows of the CSV
+  const addressRows = [];
 
-  // open uploaded file
+  // Create counter for number of approved addresses
+  let numAddresses = 0;
+
+  // Open the uploaded file
   csv.fromPath(req.file.path)
+    // For each set of data (rows)
     .on('data', function (data) {
       if (data !== 'Address') {
+        // Push it to the rows array
         addressRows.push(data);
       }
     })
-    .on('end', function () {
+    // Once complete, do the processing
+    .on('end', async function () {
       // Delete the temp file
       fs.unlinkSync(req.file.path);
 
-      // Process the file rows
-      addressRows.forEach((address) => {
-        request(`https://maps.googleapis.com/maps/api/geocode/json?address=${address}&key=${process.env.GEOCODING_API_KEY}`,
-          { json: true }, 
-          async (err, res, body) => {
-            // If there is an error, log it
-            if (err) { 
-              return console.log(err); 
-            }
-
-            // Otherwise, if OK and type is Rooftype, insert the data
-            if (body.status === 'OK' && body.results[0].geometry.location_type === 'ROOFTOP') {
-              try {
-                const preparedData = await prepareGeocodeData(body.results[0]);
-                await (new Address(preparedData)).save();
-                console.log('Address loaded');
-              } catch(err) {
-                console.log(err);
-                process.exit();
-              }
-            }
+      // Process the file rows ysing async / await
+      for (let address in addressRows) {
+        try {
+          // Geocode the provided address
+          const addressData = await geocodeAddress(address);
+          
+          // If it's a good address, prepare the data and insert
+          if (addressData) {
+            const preparedData = await prepareGeocodeData(addressData);
+            await (new Address(preparedData)).save();
+            numAddresses++;
           }
-        );
-      });
+        } catch (e) {
+          console.error(e);
+        }
+      }
 
-      // TO DO, make it async
-
-      res.send('Added');
+      // Return number of addresses added
+      res.send({ numAddresses });
     });
 };

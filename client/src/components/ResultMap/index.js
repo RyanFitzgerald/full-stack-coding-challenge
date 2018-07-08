@@ -1,10 +1,13 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Marker } from 'react-google-maps';
 import { mapAPIKey } from '../../config';
 
+// Import components
 import Map from '../Map';
 import Wrapper from './Wrapper';
 
+// Render markers for provided addresses
 function renderMarker(address, key) {
   return (
     <Marker 
@@ -15,6 +18,7 @@ function renderMarker(address, key) {
   );
 }
 
+// Define the component
 function ResultMap({ data }) {
   return (
     <Wrapper>
@@ -29,5 +33,10 @@ function ResultMap({ data }) {
     </Wrapper>
   );
 }
+
+// Define the props
+ResultMap.propTypes = {
+  data: PropTypes.array.isRequired
+};
 
 export default ResultMap;

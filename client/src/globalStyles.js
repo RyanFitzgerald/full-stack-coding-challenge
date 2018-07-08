@@ -1,6 +1,7 @@
 import { injectGlobal } from 'styled-components';
 import styledNormalize from 'styled-normalize';
  
+// Global app styles
 injectGlobal`
   ${styledNormalize}
   
