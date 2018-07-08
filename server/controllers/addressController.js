@@ -76,8 +76,10 @@ exports.addAddresses = async (req, res) => {
           // If it's a good address, prepare the data and insert
           if (addressData) {
             const preparedData = await prepareGeocodeData(addressData);
-            await (new Address(preparedData)).save();
-            numAddresses++;
+            if (preparedData) {
+              await (new Address(preparedData)).save();
+              numAddresses++;
+            }
           }
         } catch (e) {
           console.error(e);

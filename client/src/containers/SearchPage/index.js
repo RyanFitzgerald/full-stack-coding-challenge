@@ -23,6 +23,7 @@ class SearchPage extends React.Component {
     this.handleTypeChange = this.handleTypeChange.bind(this);
     this.handleQueryChange = this.handleQueryChange.bind(this);
     this.handleLoadButton = this.handleLoadButton.bind(this);
+    this.handleMarkerClick = this.handleMarkerClick.bind(this);
     this.getAddresses = this.getAddresses.bind(this);
     this.renderResults = this.renderResults.bind(this);
     this.renderLoadButton = this.renderLoadButton.bind(this);
@@ -32,6 +33,7 @@ class SearchPage extends React.Component {
       type: 'List',
       query: '',
       sets: 1,
+      openInfoWindow: false,
       data: false
     };
   }
@@ -59,6 +61,12 @@ class SearchPage extends React.Component {
     }));
   }
 
+  handleMarkerClick(id) {
+    this.setState({
+      openInfoWindow: id
+    });
+  }
+
   getAddresses(query) {
     getRequest(`/api/v1/addresses?q=${query}`).then(data => {
       if (typeof data === 'undefined' || data.status === 500 || data.error) {
@@ -71,6 +79,9 @@ class SearchPage extends React.Component {
 
   // Render results based on type chosen
   renderResults(type, sets, data) {
+    // Destructure state
+    const { openInfoWindow } = this.state;
+
     // If there is no data, show loading
     if (!data) {
       return (
@@ -81,7 +92,7 @@ class SearchPage extends React.Component {
     // If type is Map, render the map
     if (type === 'Map') {
       return (
-        <ResultMap data={data}/>
+        <ResultMap openInfoWindow={openInfoWindow} onMarkerClick={this.handleMarkerClick} data={data}/>
       );
     }
 

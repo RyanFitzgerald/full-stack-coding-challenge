@@ -18,7 +18,7 @@ function SubHeader({children}) {
 
 // Define the props
 SubHeader.propTypes = {
-  children: PropTypes.element.isRequired
+  children: PropTypes.any
 }
 
 export default SubHeader;

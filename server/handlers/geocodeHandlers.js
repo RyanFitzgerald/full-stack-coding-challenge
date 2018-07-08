@@ -47,6 +47,11 @@ exports.prepareGeocodeData = (data) => {
     } 
   });
 
+  // Return false if all required information wasn't found
+  if (Object.keys(result).length !== 8) {
+    return false;
+  }
+
   // Send back formatted result
   return result;
 };

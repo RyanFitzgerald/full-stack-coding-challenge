@@ -9,7 +9,7 @@ mongoose.connect(process.env.DATABASE, { useNewUrlParser: true });
 mongoose.Promise = global.Promise;
 
 // Create stream
-const stream = fs.createReadStream('./data/simple.csv');
+const stream = fs.createReadStream('./data/addresses.csv');
 
 // Import models
 const Address = require('../models/Address');
@@ -46,8 +46,10 @@ function loadData() {
           // If it's a good address, prepare the data and insert
           if (addressData) {
             const preparedData = await prepareGeocodeData(addressData);
-            await (new Address(preparedData)).save();
-            numAddresses++;
+            if (preparedData) {
+              await (new Address(preparedData)).save();
+              numAddresses++;
+            }
           }
         } catch (e) {
           console.error(e);
@@ -61,7 +63,10 @@ function loadData() {
 }
 
 // Handle commands
-if (process.argv.includes('--delete')) {
+if (process.env.NODE_ENV === 'production') {
+  console.log('Cannot run commands in production.');
+  process.exit();
+} else if (process.argv.includes('--delete')) {
   deleteData();
 } else {
   loadData();

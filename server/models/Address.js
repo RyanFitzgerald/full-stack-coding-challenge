@@ -17,7 +17,7 @@ const addressSchema = new mongoose.Schema({
     index: true // Index it for better performance
   },
   streetNumber: {
-    type: Number,
+    type: String,
     required: 'A street number is required'
   },
   street: {

@@ -16,7 +16,7 @@ const Map = withScriptjs(withGoogleMap(function({ children }) {
 
 // Define prop types
 Map.propTypes = {
-  children: PropTypes.element.isRequired
+  children: PropTypes.any.isRequired
 }
 
 export default Map;
