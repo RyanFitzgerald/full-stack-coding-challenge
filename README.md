@@ -2,9 +2,7 @@
 
 ### Submission Details
 
-#### Setup
-
-##### Client
+#### Client Setup
 
 1. Install required dependencies by running ```npm install```
 2. Rename ```config.sample.js``` to ```config.js``` and add the Google Geocode API Key 
@@ -14,7 +12,7 @@
 
 **Optional:** To test the client side, simply run ```npm test``` from ```/server```.
 
-##### Server
+#### Server Server
 
 1. Install required dependencies by running ```npm install```
 2. Rename ```variables.env.sample``` to ```variables.env``` and add the Google Geocode API Key and MongoDB credentials
@@ -24,7 +22,7 @@
 
 **Optional:** To test the server side, simply run ```npm test``` from ```/client```.
 
-#### Challenges
+#### General Challenges
 
 * One challenge that made this task more difficult was dealing with the data returned from the Geocode API. The data returned varied slightly from result-to-result and was in a vastly different format than the Address model of the app required, so I needed to write an additional function that would prepare and format the data as required. Moreover, the data had to also be checked in order to ensure it met the requirements of the challenge (i.e. type ```ROOFTOP```).
 
