@@ -1,0 +1,117 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<AddPage /> should match the snapshot 1`] = `
+.c0 {
+  background: #f5f5f5;
+  background-image: url(bg.png);
+  border-bottom: 1px solid #e6e6e6;
+  padding: 100px 0;
+  text-align: center;
+}
+
+.c1 {
+  margin: 0 auto;
+  max-width: 960px;
+  padding: 15px;
+}
+
+.c1:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.c2 {
+  color: #373958;
+  font-size: 2.5em;
+  line-height: 1.25;
+  margin: 0;
+}
+
+.c5 {
+  color: #373958;
+  font-size: 2em;
+  line-height: 1.25;
+  margin: 15px 0;
+  text-align: center;
+}
+
+.c3 {
+  margin: 0;
+}
+
+.c6 {
+  border: 1px solid #e6e6e6;
+  display: block;
+  margin: 0 auto;
+  padding: 5px;
+}
+
+.c7 {
+  background: #3498db;
+  border: 0;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+  display: block;
+  margin: 15px auto 0;
+  padding: 15px 50px;
+  -webkit-transition: 0.25s ease all;
+  transition: 0.25s ease all;
+}
+
+.c7:hover {
+  background: #236c9c;
+}
+
+.c4 {
+  padding: 50px 15px;
+}
+
+<div>
+  <div
+    className="c0"
+  >
+    <div
+      className="c1"
+    >
+      <h1
+        className="c2"
+      >
+        Add Address
+      </h1>
+      <p
+        className="c3"
+      >
+        Use the form below to add additional addresses from a csv file
+      </p>
+    </div>
+  </div>
+  <div
+    className="c4 c1"
+  >
+    <h2
+      className="c5"
+    >
+      Upload Address CSV File
+    </h2>
+    <form
+      encType="multipart/form-data"
+      onSubmit={[Function]}
+    >
+      <input
+        accept=".csv"
+        className="c6"
+        name="file"
+        type="file"
+      />
+      <button
+        className="c7"
+        type="submit"
+      >
+        Upload Addresses
+      </button>
+    </form>
+  </div>
+</div>
+`;

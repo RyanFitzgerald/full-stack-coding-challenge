@@ -1,0 +1,295 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<App /> should match the snapshot 1`] = `
+.c16 {
+  margin: 30px 0;
+  text-align: center;
+}
+
+.c5 {
+  background: #f5f5f5;
+  background-image: url(bg.png);
+  border-bottom: 1px solid #e6e6e6;
+  padding: 100px 0;
+  text-align: center;
+}
+
+.c1 {
+  margin: 0 auto;
+  max-width: 960px;
+  padding: 15px;
+}
+
+.c1:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.c6 {
+  color: #373958;
+  font-size: 2.5em;
+  line-height: 1.25;
+  margin: 0;
+}
+
+.c15 {
+  color: #373958;
+  font-size: 2em;
+  line-height: 1.25;
+  margin: 15px 0;
+  text-align: center;
+}
+
+.c7 {
+  margin: 0;
+}
+
+.c8 {
+  margin-top: 30px;
+  position: relative;
+}
+
+.c9 {
+  bottom: 0;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 50px;
+}
+
+.c9 svg {
+  margin-top: 12px;
+}
+
+.c10 {
+  border: 1px solid #e6e6e6;
+  border-radius: 4px;
+  box-shadow: 0 1px 10px rgba(67,66,97,0.5);
+  outline: none;
+  padding: 15px 15px 15px 50px;
+  width: 100%;
+}
+
+.c12 {
+  background: #e5e5e5;
+  border: 1px solid #e6e6e6;
+  border-bottom-right-radius: 4px;
+  border-top-right-radius: 4px;
+  bottom: 0;
+  color: #696d80;
+  cursor: pointer;
+  padding: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  -webkit-transition: 0.25s ease all;
+  transition: 0.25s ease all;
+  width: 100px;
+}
+
+.c12:hover {
+  background: #e5e5e5;
+}
+
+.c13 {
+  background: #fafafa;
+  border: 1px solid #e6e6e6;
+  border-bottom-right-radius: 4px;
+  border-top-right-radius: 4px;
+  bottom: 0;
+  color: #696d80;
+  cursor: pointer;
+  padding: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  -webkit-transition: 0.25s ease all;
+  transition: 0.25s ease all;
+  width: 100px;
+}
+
+.c13:hover {
+  background: #e5e5e5;
+}
+
+.c11 {
+  border-bottom-right-radius: 0;
+  border-right: 0;
+  border-top-right-radius: 0;
+  right: 100px;
+}
+
+.c14 {
+  padding: 50px 15px;
+}
+
+.c0 {
+  background: #fff;
+  border-bottom: 1px solid #e6e6e6;
+  padding: 15px 0;
+}
+
+.c2 {
+  float: left;
+}
+
+.c3 {
+  float: right;
+}
+
+.c4 {
+  border-radius: 4px;
+  color: #696d80;
+  display: inline-block;
+  font-weight: 700;
+  padding: 15px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-transition: 0.25s ease all;
+  transition: 0.25s ease all;
+}
+
+.c4:hover {
+  background: #f2f2f2;
+  color: #3498db;
+}
+
+<div
+  className="App"
+>
+  <div
+    className="Toastify"
+  />
+  <header
+    className="c0"
+  >
+    <div
+      className="c1"
+    >
+      <div
+        className="c2"
+      >
+        <a
+          href="/"
+          onClick={[Function]}
+        >
+          <img
+            alt="Address Lookup"
+            src="logo.png"
+          />
+        </a>
+      </div>
+      <div
+        className="c3"
+      >
+        <nav>
+          <a
+            className="c4"
+            href="/"
+            onClick={[Function]}
+          >
+            Search
+          </a>
+          <a
+            className="c4"
+            href="/add"
+            onClick={[Function]}
+          >
+            Add
+          </a>
+        </nav>
+      </div>
+    </div>
+  </header>
+  <div>
+    <div
+      className="c5"
+    >
+      <div
+        className="c1"
+      >
+        <h1
+          className="c6"
+        >
+          Address Search
+        </h1>
+        <p
+          className="c7"
+        >
+          Use the search form below to look up addresses
+        </p>
+        <div
+          className="c8"
+        >
+          <div
+            className="c9"
+          >
+            <svg
+              fill="none"
+              height="24"
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="11"
+                cy="11"
+                r="8"
+              />
+              <line
+                x1="21"
+                x2="16.65"
+                y1="21"
+                y2="16.65"
+              />
+            </svg>
+          </div>
+          <input
+            className="c10"
+            defaultValue=""
+            name="Search"
+            onChange={[Function]}
+            placeholder="Enter Search Term"
+            type="text"
+          />
+          <button
+            className="c11 c12"
+            onClick={[Function]}
+          >
+            List View
+          </button>
+          <button
+            className="c13"
+            onClick={[Function]}
+          >
+            Map View
+          </button>
+        </div>
+      </div>
+    </div>
+    <div
+      className="c14 c1"
+    >
+      <h2
+        className="c15"
+      >
+         Result(s)
+      </h2>
+      <div
+        className="c16"
+      >
+        <img
+          alt="Loading"
+          src="loading.gif"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;

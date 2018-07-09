@@ -1,0 +1,113 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ResultTable /> should match the snapshot 1`] = `
+.c0 {
+  overflow: auto;
+}
+
+.c1 {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+}
+
+.c2 {
+  border-bottom: 2px solid #3498db;
+  padding: 10px;
+  text-align: left;
+}
+
+.c3 {
+  -webkit-transition: 0.25s ease all;
+  transition: 0.25s ease all;
+}
+
+.c3:hover {
+  background: #f7f7f7;
+}
+
+.c4 {
+  border-bottom: 1px solid #e6e6e6;
+  padding: 10px;
+  text-align: left;
+}
+
+<div
+  className="c0"
+>
+  <table
+    className="c1"
+  >
+    <thead>
+      <tr>
+        <th
+          className="c2"
+        >
+          Street #
+        </th>
+        <th
+          className="c2"
+        >
+          Street
+        </th>
+        <th
+          className="c2"
+        >
+          City
+        </th>
+        <th
+          className="c2"
+        >
+          State
+        </th>
+        <th
+          className="c2"
+        >
+          Country
+        </th>
+        <th
+          className="c2"
+        >
+          Zip Code
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr
+        className="c3"
+      >
+        <td
+          className="c4"
+        >
+          15481
+        </td>
+        <td
+          className="c4"
+        >
+          West 110th Street
+        </td>
+        <td
+          className="c4"
+        >
+          Lenexa
+        </td>
+        <td
+          className="c4"
+        >
+          Kansas
+        </td>
+        <td
+          className="c4"
+        >
+          United States
+        </td>
+        <td
+          className="c4"
+        >
+          66219
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;

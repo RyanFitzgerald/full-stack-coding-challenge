@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Nav /> should match the snapshot 1`] = `
+.c0 {
+  border-radius: 4px;
+  color: #696d80;
+  display: inline-block;
+  font-weight: 700;
+  padding: 15px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-transition: 0.25s ease all;
+  transition: 0.25s ease all;
+}
+
+.c0:hover {
+  background: #f2f2f2;
+  color: #3498db;
+}
+
+<nav>
+  <a
+    className="c0"
+    href="/"
+    onClick={[Function]}
+  >
+    Search
+  </a>
+  <a
+    className="c0"
+    href="/add"
+    onClick={[Function]}
+  >
+    Add
+  </a>
+</nav>
+`;

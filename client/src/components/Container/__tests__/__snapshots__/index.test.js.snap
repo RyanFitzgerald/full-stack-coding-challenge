@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Container /> should match the snapshot 1`] = `
+.c0 {
+  margin: 0 auto;
+  max-width: 960px;
+  padding: 15px;
+}
+
+.c0:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+<div
+  className="c0"
+>
+  Test
+</div>
+`;

@@ -33,7 +33,7 @@ class SearchPage extends React.Component {
       type: 'List',
       query: '',
       sets: 1,
-      openInfoWindow: false,
+      openInfoWindow: -1,
       data: false
     };
   }

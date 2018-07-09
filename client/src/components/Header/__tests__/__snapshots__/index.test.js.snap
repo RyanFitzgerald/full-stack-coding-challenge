@@ -1,0 +1,88 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Header /> should match the snapshot 1`] = `
+.c0 {
+  background: #fff;
+  border-bottom: 1px solid #e6e6e6;
+  padding: 15px 0;
+}
+
+.c2 {
+  float: left;
+}
+
+.c3 {
+  float: right;
+}
+
+.c1 {
+  margin: 0 auto;
+  max-width: 960px;
+  padding: 15px;
+}
+
+.c1:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.c4 {
+  border-radius: 4px;
+  color: #696d80;
+  display: inline-block;
+  font-weight: 700;
+  padding: 15px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-transition: 0.25s ease all;
+  transition: 0.25s ease all;
+}
+
+.c4:hover {
+  background: #f2f2f2;
+  color: #3498db;
+}
+
+<header
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <div
+      className="c2"
+    >
+      <a
+        href="/"
+        onClick={[Function]}
+      >
+        <img
+          alt="Address Lookup"
+          src="logo.png"
+        />
+      </a>
+    </div>
+    <div
+      className="c3"
+    >
+      <nav>
+        <a
+          className="c4"
+          href="/"
+          onClick={[Function]}
+        >
+          Search
+        </a>
+        <a
+          className="c4"
+          href="/add"
+          onClick={[Function]}
+        >
+          Add
+        </a>
+      </nav>
+    </div>
+  </div>
+</header>
+`;

@@ -1,0 +1,131 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Search /> should match the snapshot 1`] = `
+.c0 {
+  margin-top: 30px;
+  position: relative;
+}
+
+.c1 {
+  bottom: 0;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 50px;
+}
+
+.c1 svg {
+  margin-top: 12px;
+}
+
+.c2 {
+  border: 1px solid #e6e6e6;
+  border-radius: 4px;
+  box-shadow: 0 1px 10px rgba(67,66,97,0.5);
+  outline: none;
+  padding: 15px 15px 15px 50px;
+  width: 100%;
+}
+
+.c4 {
+  background: #e5e5e5;
+  border: 1px solid #e6e6e6;
+  border-bottom-right-radius: 4px;
+  border-top-right-radius: 4px;
+  bottom: 0;
+  color: #696d80;
+  cursor: pointer;
+  padding: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  -webkit-transition: 0.25s ease all;
+  transition: 0.25s ease all;
+  width: 100px;
+}
+
+.c4:hover {
+  background: #e5e5e5;
+}
+
+.c5 {
+  background: #fafafa;
+  border: 1px solid #e6e6e6;
+  border-bottom-right-radius: 4px;
+  border-top-right-radius: 4px;
+  bottom: 0;
+  color: #696d80;
+  cursor: pointer;
+  padding: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  -webkit-transition: 0.25s ease all;
+  transition: 0.25s ease all;
+  width: 100px;
+}
+
+.c5:hover {
+  background: #e5e5e5;
+}
+
+.c3 {
+  border-bottom-right-radius: 0;
+  border-right: 0;
+  border-top-right-radius: 0;
+  right: 100px;
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <svg
+      fill="none"
+      height="24"
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth="2"
+      viewBox="0 0 24 24"
+      width="24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <circle
+        cx="11"
+        cy="11"
+        r="8"
+      />
+      <line
+        x1="21"
+        x2="16.65"
+        y1="21"
+        y2="16.65"
+      />
+    </svg>
+  </div>
+  <input
+    className="c2"
+    defaultValue=""
+    name="Search"
+    onChange={[Function]}
+    placeholder="Enter Search Term"
+    type="text"
+  />
+  <button
+    className="c3 c4"
+    onClick={[Function]}
+  >
+    List View
+  </button>
+  <button
+    className="c5"
+    onClick={[Function]}
+  >
+    Map View
+  </button>
+</div>
+`;

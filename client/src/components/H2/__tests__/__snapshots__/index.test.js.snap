@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<H2 /> should match the snapshot 1`] = `
+.c0 {
+  color: #373958;
+  font-size: 2em;
+  line-height: 1.25;
+  margin: 15px 0;
+  text-align: center;
+}
+
+<h2
+  className="c0"
+>
+  Test
+</h2>
+`;

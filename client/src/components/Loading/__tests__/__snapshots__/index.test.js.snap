@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Loading /> should match the snapshot 1`] = `
+.c0 {
+  margin: 30px 0;
+  text-align: center;
+}
+
+<div
+  className="c0"
+>
+  <img
+    alt="Loading"
+    src="loading.gif"
+  />
+</div>
+`;

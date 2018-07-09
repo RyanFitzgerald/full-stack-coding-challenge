@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Upload /> should match the snapshot 1`] = `
+.c0 {
+  border: 1px solid #e6e6e6;
+  display: block;
+  margin: 0 auto;
+  padding: 5px;
+}
+
+<input
+  className="c0"
+  type="file"
+/>
+`;

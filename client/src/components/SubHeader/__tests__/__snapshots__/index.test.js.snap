@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SubHeader /> should match the snapshot 1`] = `
+.c0 {
+  background: #f5f5f5;
+  background-image: url(bg.png);
+  border-bottom: 1px solid #e6e6e6;
+  padding: 100px 0;
+  text-align: center;
+}
+
+.c1 {
+  margin: 0 auto;
+  max-width: 960px;
+  padding: 15px;
+}
+
+.c1:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    Content
+  </div>
+</div>
+`;
