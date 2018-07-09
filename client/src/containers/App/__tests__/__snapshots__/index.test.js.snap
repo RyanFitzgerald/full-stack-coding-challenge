@@ -156,6 +156,41 @@ exports[`<App /> should match the snapshot 1`] = `
   color: #3498db;
 }
 
+@media only screen and (max-width:480px) {
+  .c10 {
+    padding-right: 15px;
+  }
+}
+
+@media only screen and (max-width:480px) {
+  .c12 {
+    bottom: -100%;
+    height: 40px;
+    left: auto;
+    right: 0;
+    top: auto;
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width:480px) {
+  .c13 {
+    bottom: -100%;
+    height: 40px;
+    left: auto;
+    right: 0;
+    top: auto;
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width:480px) {
+  .c11 {
+    left: 0;
+    right: auto;
+  }
+}
+
 <div
   className="App"
 >
