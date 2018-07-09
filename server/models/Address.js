@@ -13,7 +13,6 @@ const addressSchema = new mongoose.Schema({
   formattedAddress: {
     type: String,
     required: 'A formatted address must be provided',
-    unique: true,
     index: true // Index it for better performance
   },
   streetNumber: {
