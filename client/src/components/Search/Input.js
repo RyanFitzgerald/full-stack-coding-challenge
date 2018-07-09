@@ -7,6 +7,10 @@ const Input = styled.input`
   outline: none;
   padding: 15px 15px 15px 50px;
   width: 100%;
+
+  @media only screen and (max-width: 480px) {
+    padding-right: 15px;
+  }
 `;
 
 export default Input;

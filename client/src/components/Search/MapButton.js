@@ -18,6 +18,15 @@ const TypeButton = styled.button`
   &:hover {
     background: #e5e5e5;
   }
+
+  @media only screen and (max-width: 480px) {
+    bottom: -100%;
+    height: 40px;
+    left: auto;
+    right: 0;
+    top: auto;
+    width: 50%;
+  }
 `;
 
 export default TypeButton;
